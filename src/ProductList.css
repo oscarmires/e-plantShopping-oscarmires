@@ -23,6 +23,10 @@ body {
   font-size: 20px;
 }
 
+.navbar h1 {
+  font-size: 40px;
+}
+
 .navbar .ul {
   display: flex;
   justify-content: space-between;
@@ -117,8 +121,13 @@ h1.category-title {
   margin-top: 10px;
 }
 
-.product-button:hover {
+.product-button:not(:disabled):hover {
   background-color: #c0392b;
+}
+
+.product-button:disabled {
+  background-color: gray;
+  cursor: default;
 }
 
 /* Pseudo-elements - Sale badge */
@@ -234,7 +243,7 @@ h1.category-title {
   cursor: pointer;
 }
 
-.product-button:hover {
+.product-button:not(:disabled):hover {
   background-color: #45a049;
 }
 
